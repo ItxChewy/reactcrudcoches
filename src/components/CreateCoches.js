@@ -56,7 +56,7 @@ export default class CreateCoches extends Component {
             <label className="form-label">Conductor</label>
             <input className="form-control" ref={this.cajaConductor}></input>
             <label className="form-label">Imagen</label>
-            <input type="file" className="form-control" id="inputGroupFile01" ref={this.cajaImagen}></input>
+            <input  className="form-control"  ref={this.cajaImagen}></input>
             <hr></hr>
             <button className='btn btn-sm btn-primary'>Crear</button>
         </form>

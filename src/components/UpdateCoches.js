@@ -30,7 +30,7 @@ export default class UpdateCoches extends Component {
         let marca = this.cajaMarca.current.value;
         let modelo = this.cajaModelo.current.value;
         let conductor = this.cajaConductor.current.value;
-        let imagen = this.cajaImagen.current.value;
+        let imagen = decodeURIComponent(this.cajaImagen.current.value);
         let coche = {
             idCoche:id,
             marca:marca,
@@ -69,7 +69,7 @@ export default class UpdateCoches extends Component {
                     <label className="form-label">Conductor</label>
                     <input className="form-control" ref={this.cajaConductor} defaultValue={this.state.coche.conductor}></input>
                     <label className="form-label">Imagen</label>
-                    <input type="file" class="form-control" id="inputGroupFile01" ref={this.cajaImagen} defaultValue={this.state.coche.imagen}></input>
+                    <input  class="form-control"  ref={this.cajaImagen} defaultValue={this.state.coche.imagen}></input>
                     <hr></hr>
                     <button className='btn btn-sm btn-primary'>Actualizar</button>
                 </form>
